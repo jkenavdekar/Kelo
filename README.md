@@ -1,4 +1,4 @@
-# aSapien - an Intelligent Conversational AI for Customer Support
+# Kelo.ai - an Intelligent Conversational AI for your business
 
 ## Live demo
 
