@@ -9,6 +9,8 @@ import Newsletter from '../partials/Newsletter';
 import Footer from '../partials/Footer';
 import Banner from '../partials/Banner';
 import Cards from './Cards';
+import Show from '../partials/Show';
+import Show2 from '../partials/Show2';
 
 function Home() {
   return (
@@ -22,16 +24,15 @@ function Home() {
 
         {/*  Page sections */}
         <HeroHome />
-        <FeaturesHome />
+        <Show />
+        <Show2 />
         <FeaturesBlocks />
-        <Testimonials />
-        <Cards/>
+        <FeaturesHome />
         <Newsletter />
 
       </main>
 
       {/*  Site footer */}
-      <Footer />
 
     </div>
   );

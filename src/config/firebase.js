@@ -4,7 +4,6 @@ import 'firebase/compat/database';
 import 'firebase/compat/auth';
 import 'firebase/compat/storage';
 
-require('dotenv').config();
 
 const firebaseConfig = {
     apiKey: process.env.APIKEY,

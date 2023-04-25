@@ -99,7 +99,7 @@ function SignUp() {
                 {isSubmitted && (
                   <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center">
                     <div className="bg-white rounded-md p-6 shadow-lg">
-                      <p className="text-green-300 font-bold text-lg mb-2">Form submitted successfully!</p>
+                      <p className="text-gray-800 font-bold text-lg mb-2">Form submitted successfully!</p>
                       <button
                         className="bg-blue-500 text-white px-4 py-2 rounded-md"
                         onClick={() => setIsSubmitted(false)}

@@ -3,7 +3,7 @@ import React from 'react';
 function Newsletter() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto py-20 px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
 
           {/* CTA box */}
@@ -44,9 +44,11 @@ function Newsletter() {
 
                 {/* CTA form */}
                 <form className="w-full lg:w-auto">
-                  <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
+                  <div className="flex sm:flex-row max-w-xs mx-auto sm:max-w-md lg:mx-0">
+                    {/*
                     <input type="email" className="form-input w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Your email…" aria-label="Your email…" />
-                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" href="#0">Join</a>
+                    */}
+                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" href="/signup">Join</a>
                   </div>
                   {/* Success message */}
                   {/* <p className="text-sm text-gray-400 mt-3">Thanks for subscribing!</p> 
@@ -61,6 +63,17 @@ function Newsletter() {
 
         </div>
       </div>
+
+      <div className="flex max-w-6xl mx-auto px-4 sm:px-6">
+
+        <div className="flex sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200">
+
+        <div className="text-sm text-gray-600 mr-4">copyright owned by <a className="text-blue-600 hover:underline" href="#">kelo.ai</a> All rights reserved.</div>
+
+        </div>
+
+      </div>
+
     </section>
   );
 }

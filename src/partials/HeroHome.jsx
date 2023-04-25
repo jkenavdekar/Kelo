@@ -1,15 +1,26 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Modal from '../utils/Modal';
-
+import { Link } from 'react-router-dom';
 import HeroImage from '../images/hero-image.png';
 
 function HeroHome() {
+
+  {/* 
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const video = useRef(null);
 
   useEffect(() => {
     videoModalOpen ? video.current.play() : video.current.pause();
-  }, [videoModalOpen]);    
+  }, [videoModalOpen]); */}
+  
+  
+  const handleClickScroll = () => {
+    const element = document.getElementById('section-1');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative">
@@ -32,12 +43,13 @@ function HeroHome() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-32 pb-2 md:pt-40 md:pb-2">
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">
-              We offer your business <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Limitless </span>
-              Customer Service
+              We offer your business 
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400"> Limitless </span>
+              Customer support
             </h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">
@@ -45,20 +57,22 @@ function HeroHome() {
               </p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">
-                    Free Demo
-                  </a>
+                  <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" onClick={handleClickScroll}>
+                    Learn More
+                  </button>                 
                 </div>
+                {/*
                 <div>
                   <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
                     Learn more
                   </a>
                 </div>
+                */}
               </div>
             </div>
           </div>
 
-          {/* Hero image */}
+          {/* Hero image
           <div>
             <div className="relative flex justify-center mb-8" data-aos="zoom-y-out" data-aos-delay="450">
               <div className="flex flex-col justify-center">
@@ -99,6 +113,7 @@ function HeroHome() {
                   </g>
                 </svg>
               </div>
+
               <button
                 className="absolute top-full flex items-center transform -translate-y-1/2 bg-white rounded-full font-medium group p-4 shadow-lg"
                 onClick={(e) => {
@@ -118,9 +133,9 @@ function HeroHome() {
                 </svg>
                 <span className="ml-3">Watch the full video (2 min)</span>
               </button>
+              
             </div>
 
-            {/* Modal */}
             <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
               <div className="relative pb-9/16">
                 <video ref={video} className="absolute w-full h-full" width="1920" height="1080" loop autoPlay controls>
@@ -130,6 +145,8 @@ function HeroHome() {
               </div>
             </Modal>
           </div>
+          */}
+          
         </div>
       </div>
     </section>
